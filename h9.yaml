@@ -1,0 +1,37 @@
+source: "www"
+target: "build"
+server:
+  port: 8082
+
+aws:
+
+  domain: maximumpanda.com
+  region: us-west-1
+
+  site:
+    index: index
+    error: 404
+
+  environments:
+
+    production:
+      apex: secondary
+      hostnames:
+        - www
+      # cache:
+      #   expires: 1800 # 30 minutes
+      #   ssl: false
+      #   priceClass: 100
+
+    staging:
+      hostnames:
+        - staging
+
+    feature:
+      hostnames:
+        - feature
+
+blog:
+  page:
+    size: 10
+    template: "_layouts/blog-summary.jade"

@@ -1,0 +1,9 @@
+body {
+  color: #fff;
+  background-color: #800000;
+  font-family: 'Fjalla One', sans-serif;
+  margin: 10em;
+}
+body h1 {
+  font-size: 100px;
+}
